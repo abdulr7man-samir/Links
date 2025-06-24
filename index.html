@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>عبدو سمير | روابط التواصل</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    html, body {
+      font-family: 'Cairo', sans-serif;
+      background: #0f172a;
+      color: #fff;
+      min-height: 100vh;
+      padding: 20px;
+      overflow-x: hidden;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.07);
+      backdrop-filter: blur(15px);
+      border-radius: 20px;
+      padding: 40px 30px;
+      width: 100%;
+      max-width: 420px;
+      text-align: center;
+      box-shadow: 0 12px 35px rgba(0,0,0,0.6);
+      animation: fadeIn 1s ease;
+      margin-bottom: 40px;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .profile-img {
+      width: 170px;
+      height: 170px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #fff;
+      margin-bottom: 20px;
+      box-shadow: 0 0 20px rgba(255,255,255,0.3);
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+    p.bio {
+      font-size: 1rem;
+      color: #ddd;
+      margin-bottom: 30px;
+    }
+    .links a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      padding: 14px 20px;
+      border-radius: 12px;
+      margin: 10px 0;
+      transition: 0.3s ease;
+      font-size: 1.05rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    .links a:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    }
+    .facebook { background: #1877f2; }
+    .instagram { background: linear-gradient(to right, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+    .tiktok { background: #000000; }
+    .whatsapp { background: #25d366; }
+    .telegram { background: #0088cc; }
+    .threads { background: #1c1c1c; }
+    .links i {
+      font-size: 1.2rem;
+    }
+    footer {
+      margin-top: 25px;
+      font-size: 0.85rem;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img src="https://i.postimg.cc/z3m4bMqn/IMG-20250103-WA0052.jpg" alt="Abdo Samir" class="profile-img">
+    <h1>عبدو سمير</h1>
+    <p class="bio">طالب ثانوي عام | شغوف بالتقنية والتصميم</p>
+    <div class="links">
+      <a href="https://www.facebook.com/share/1ATzTwQNys/" class="facebook"><i class="fab fa-facebook-f"></i> فيسبوك</a>
+      <a href="https://www.instagram.com/abdulr7man.samir" class="instagram"><i class="fab fa-instagram"></i> إنستغرام</a>
+      <a href="https://www.tiktok.com/@abdulr7man_samir" class="tiktok"><i class="fab fa-tiktok"></i> تيك توك</a>
+      <a href="https://wa.me/201029657544" class="whatsapp"><i class="fab fa-whatsapp"></i> واتساب</a>
+      <a href="https://t.me/Abdulr7man_samir" class="telegram"><i class="fab fa-telegram-plane"></i> تليجرام</a>
+      <a href="https://www.threads.net/@abdulr7man.samir" class="threads"><i class="fab fa-threads"></i> ثريدز</a>
+    </div>
+    <footer>&copy; 2025 عبدو سمير. جميع الحقوق محفوظة.</footer>
+  </div>
+</body>
+</html>
