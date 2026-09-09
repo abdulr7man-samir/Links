@@ -4,62 +4,260 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <title>عبدو سمير — الحسابات الرسمية</title>
-  <meta name="description" content="الصفحة الرسمية لعبدو سمير — كل الروابط الرسمية في مكان واحد.">
   <meta name="theme-color" content="#05060a">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- TikTok Embed Script -->
+  <script async src="https://www.tiktok.com/embed.js"></script>
+  <!-- Instagram Embed Script -->
+  <script async src="https://www.instagram.com/embed.js"></script>
+
   <style>
     :root {
-      --bg1:#05060a; --bg2:#0b1530;
-      --text:#fff; --muted:#ccc;
-      --card:#111; --accent:#4fa3ff;
-      --shadow:0 12px 40px rgba(0,0,0,.5);
+      --bg1:#070d1e; --bg2:#030712;
+      --text:#ffffff; --muted:#94a3b8;
+      --card:rgba(15, 23, 42, 0.6); 
+      --card-border:rgba(255, 255, 255, 0.08);
+      --accent:#38bdf8;
+      --shadow:0 10px 30px rgba(0, 0, 0, 0.4);
     }
     [data-theme="light"] {
-      --bg1:#f7fbff; --bg2:#dde7f5;
-      --text:#111; --muted:#444;
-      --card:#fff; --accent:#0077ff;
-      --shadow:0 6px 24px rgba(0,0,0,.15);
+      --bg1:#f0f4f9; --bg2:#d9e2ec;
+      --text:#1a202c; --muted:#4a5568;
+      --card:rgba(255, 255, 255, 0.7); 
+      --card-border:rgba(255, 255, 255, 0.8);
+      --accent:#0077ff;
+      --shadow:0 10px 25px rgba(0, 0, 0, 0.08);
     }
     *{box-sizing:border-box}
     body {
-      margin:0; font-family:'Cairo',sans-serif;
-      background:linear-gradient(135deg,var(--bg1),var(--bg2));
+      margin:0; font-family:'Cairo', sans-serif;
+      background:radial-gradient(circle at top, var(--bg1), var(--bg2));
       color:var(--text); text-align:center;
       display:flex; flex-direction:column;
       min-height:100vh; justify-content:center;
       padding:20px; overflow-x:hidden;
+      transition: background 0.3s ease, color 0.3s ease;
     }
-    h1{margin-bottom:6px;font-size:2rem;}
-    .sub{font-size:.9rem;color:var(--muted);}
-    p.bio{color:var(--muted);min-height:22px;margin:10px 0 20px}
+    h1{margin: 0 0 4px; font-size:2.2rem; font-weight:700;}
+    .sub{font-size:.95rem; color:var(--muted); font-weight:600;}
+    p.bio{color:var(--text); min-height:24px; margin:12px 0 20px; font-weight:600;}
+    
     .avatar-wrap{
-      width:160px;height:160px;margin:0 auto 16px;
-      border-radius:50%;padding:6px;
-      background:linear-gradient(135deg,#7C4DFF,#00E5FF);
-      display:flex;align-items:center;justify-content:center;
-      box-shadow:0 8px 40px rgba(124,77,255,.2),0 18px 80px rgba(0,229,255,.1);
-      transition:transform .3s ease;
+      width:140px; height:140px; margin:0 auto 16px;
+      border-radius:50%; padding:3px;
+      background:linear-gradient(135deg,#38bdf8,#818cf8);
+      display:flex; align-items:center; justify-content:center;
+      box-shadow:0 0 25px rgba(56, 189, 248, 0.3);
+      transition:transform .3s ease, box-shadow .3s ease;
     }
-    .avatar-wrap:hover{transform:scale(1.05) rotate(-2deg);}
-    .avatar{width:100%;height:100%;border-radius:50%;object-fit:cover;}
-    ul{list-style:none;padding:0;max-width:420px;margin:24px auto;width:100%}
-    li{margin:10px 0;}
-    a{
-      display:flex;align-items:center;gap:10px;justify-content:center;
-      text-decoration:none;font-weight:bold;
-      padding:12px;border-radius:12px;
+    .avatar-wrap:hover{
+      transform:scale(1.05);
+      box-shadow:0 0 35px rgba(56, 189, 248, 0.5);
+    }
+    .avatar{width:100%; height:100%; border-radius:50%; object-fit:cover;}
+    
+    ul{list-style:none; padding:0; max-width:400px; margin:20px auto; width:100%}
+    li{margin:14px 0;}
+    
+    a.link-card{
+      display:flex; 
+      align-items:center; 
+      justify-content:space-between;
+      text-decoration:none; 
+      font-weight:700;
+      padding:16px 20px; 
+      border-radius:30px;
       background:var(--card);
-      box-shadow:var(--shadow);
-      transition:.25s;
-      color: var(--text); /* 👈 النص والأيقونة بياخدوا لون الثيم */
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid var(--card-border);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      transition: all .25s ease;
+      color: var(--text);
     }
-    a svg{width:22px;height:22px;fill:currentColor;} /* 👈 الأيقونة نفس لون النص */
-    a:hover{transform:translateY(-4px) scale(1.03);}
-    footer{margin-top:20px;color:var(--muted);font-size:.85rem}
-    .controls{margin:10px 0;display:flex;gap:10px;justify-content:center}
+    a.link-card svg{width:22px; height:22px; fill:currentColor;}
+    a.link-card span{font-size: 1.05rem;}
+    a.link-card:hover{
+      transform:translateY(-2px);
+      border-color: var(--accent);
+      box-shadow: 0 0 15px rgba(56, 189, 248, 0.25);
+    }
+    
+    .section-box {
+      width: 100%;
+      max-width: 400px;
+      margin: 20px auto;
+      padding: 18px;
+      border-radius: 20px;
+      background: var(--card);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid var(--card-border);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+    .section-box h2 {
+      margin: 0 0 14px;
+      font-size: 1.1rem;
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .embed-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      overflow: hidden;
+      border-radius: 12px;
+    }
+
+    footer{margin-top:20px; color:var(--muted); font-size:.85rem;}
+    .controls{margin:10px 0; display:flex; gap:10px; justify-content:center}
     button{
-      padding:10px 14px;border:0;border-radius:8px;
-      background:var(--card);color:var(--text);font-weight:bold;
-      cursor:pointer;box-shadow:var(--shadow);transition:.25s;
+      padding:10px 16px; border:1px solid var(--card-border); border-radius:20px;
+      background:var(--card); color:var(--text); font-weight:700; font-family:'Cairo', sans-serif;
+      cursor:pointer; box-shadow:var(--shadow); transition:.25s;
+      backdrop-filter: blur(10px);
+    }
+    button:hover{transform:scale(1.05); border-color: var(--accent);}
+    #bgCanvas{position:fixed; inset:0; z-index:-1; pointer-events:none;}
+  </style>
+</head>
+<body>
+  <canvas id="bgCanvas"></canvas>
+  <div class="avatar-wrap">
+    <img class="avatar" src="https://i.postimg.cc/k4t81qPm/Picsart-26-07-21-13-35-31-135.jpg" alt="صورة عبدو سمير">
+  </div>
+  <h1>عبدو سمير</h1>
+  <div class="sub">صلي على النبي 🤍🍂</div>
+  <p id="bio" class="bio"></p>
+
+  <div class="controls">
+    <button id="themeBtn">🌓 تبديل الثيم</button>
+    <button id="shareBtn">🔗 مشاركة</button>
+  </div>
+
+  <ul>
+    <li>
+      <a class="link-card" href="https://www.facebook.com/" target="_blank">
+        <svg viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H7.5v-3H10V9.5C10 7.01 11.49 5.6 13.78 5.6c1.1 0 2.25.2 2.25.2v2.47h-1.27c-1.23 0-1.62.77-1.62 1.56V12h2.78l-.44 3h-2.34v6.8c4.56-.93 8-4.96 8-9.8z"/></svg>
+        <span>فيسبوك</span>
+      </a>
+    </li>
+    <li>
+      <a class="link-card" href="https://www.instagram.com/abdulr7man.samir" target="_blank">
+        <svg viewBox="0 0 24 24"><path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm10 2c1.6 0 3 1.4 3 3v10c0 1.6-1.4 3-3 3H7c-1.6 0-3-1.4-3-3V7c0-1.6 1.4-3 3-3h10zm-5 3a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2.2a2.8 2.8 0 1 1 0 5.6 2.8 2.8 0 0 1 0-5.6zM17.5 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/></svg>
+        <span>إنستغرام</span>
+      </a>
+    </li>
+    <li>
+      <a class="link-card" href="https://www.tiktok.com/@abdulr7man_samir" target="_blank">
+        <svg viewBox="0 0 24 24"><path d="M12 2c1 0 2 .3 2.9.9a5 5 0 0 0 2.5 7.6v2.5a7.5 7.5 0 1 1-6.8-7.5V8a4 4 0 1 0 2.7 3.7V2h-1.3z"/></svg>
+        <span>تيك توك</span>
+      </a>
+    </li>
+    <li>
+      <a class="link-card" href="https://wa.me/201029657544" target="_blank">
+        <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15l-1.2 4.3 4.4-1.2A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.2-1.2l-.3-.2-2.6.7.7-2.6-.2-.3A8 8 0 1 1 12 20zm4.4-5.6c-.2-.1-1.3-.6-1.5-.7s-.3-.1-.5.1-.6.7-.8.8c-.1.2-.3.2-.5.1a6.4 6.4 0 0 1-1.9-1.2 7 7 0 0 1-1.3-1.7c-.1-.2 0-.4.1-.5l.3-.3c.1-.1.2-.2.2-.3.1-.1.1-.2 0-.3 0-.1-.5-1.2-.7-1.6-.2-.4-.4-.3-.5-.3h-.4c-.1 0-.3 0-.5.2s-.7.7-.7 1.8 1 2.1 1.1 2.2c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.7.1.5-.1 1.3-.5 1.5-1 .2-.5.2-.9.2-1 0-.1-.1-.2-.2-.2z"/></svg>
+        <span>واتساب</span>
+      </a>
+    </li>
+    <li>
+      <a class="link-card" href="https://t.me/Abdulr7man_samir" target="_blank">
+        <svg viewBox="0 0 24 24"><path d="M9.9 15.4 9.6 19c.4 0 .7-.2 1-.4l2.4-2.3 5 3.6c.9.5 1.5.2 1.7-.8l3-13.6c.3-1.2-.4-1.7-1.3-1.4L2.4 10.6c-1.2.5-1.2 1.2-.2 1.5l4.8 1.5 11.1-6.9c.5-.3.9-.1.5.2"/></svg>
+        <span>تليجرام</span>
+      </a>
+    </li>
+  </ul>
+
+  <!-- قسم TikTok -->
+  <div class="section-box">
+    <h2>🎵 أحدث فيديو على TikTok</h2>
+    <div class="embed-container">
+      <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@abdulr7man_samir" data-unique-id="abdulr7man_samir" data-embed-type="creator" style="width: 100%; margin: 0;">
+        <section>
+          <a target="_blank" href="https://www.tiktok.com/@abdulr7man_samir?_r=1&_t=ZS-99Zmc4S2tZF">@abdulr7man_samir</a>
+        </section>
+      </blockquote>
+    </div>
+  </div>
+
+  <!-- قسم Instagram المدمج حي -->
+  <div class="section-box">
+    <h2>📸 منشور / Reel إنستغرام</h2>
+    <div class="embed-container">
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DJGvPLFIlAF/?stkn=MWo4eWI4a2hqa2I5Ng==" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:12px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 0; width:100%;">
+      </blockquote>
+    </div>
+  </div>
+
+  <footer>&copy; <span id="year"></span> عبدو سمير — جميع الحقوق محفوظة</footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const bio = document.getElementById("bio");
+    const text = "الي فات اتنسي والي جاي هندسة ♥️";
+    let index = 0;
+
+    function typeEffect() {
+      if (index < text.length) {
+        bio.textContent += text.charAt(index);
+        index++;
+        setTimeout(typeEffect, 90);
+      }
+    }
+    typeEffect();
+
+    const themeBtn = document.getElementById("themeBtn");
+    function setTheme(t) {
+      document.body.setAttribute("data-theme", t);
+      localStorage.setItem("theme", t);
+    }
+    setTheme(localStorage.getItem("theme") || "dark");
+    themeBtn.onclick = () => {
+      setTheme(document.body.getAttribute("data-theme") === "light" ? "dark" : "light");
+    };
+
+    document.getElementById("shareBtn").onclick = () => {
+      const url = location.href;
+      if (navigator.share) navigator.share({ title: document.title, url });
+      else if (navigator.clipboard) navigator.clipboard.writeText(url).then(() => alert("تم نسخ الرابط!"));
+    };
+
+    const canvas = document.getElementById("bgCanvas"), ctx = canvas.getContext("2d");
+    let w, h, parts = [];
+    function size() { w = canvas.width = innerWidth; h = canvas.height = innerHeight; }
+    function init() {
+      parts = [];
+      for (let i = 0; i < 50; i++) {
+        parts.push({ x: Math.random() * w, y: Math.random() * h, vx: (Math.random() - .5) * .5, vy: (Math.random() - .5) * .5, r: Math.random() * 2 + 0.5 });
+      }
+    }
+    function draw() {
+      ctx.clearRect(0, 0, w, h);
+      ctx.fillStyle = "rgba(255, 255, 255, 0.4)";
+      for (const p of parts) {
+        p.x += p.vx; p.y += p.vy;
+        if (p.x < 0 || p.x > w) p.vx *= -1;
+        if (p.y < 0 || p.y > h) p.vy *= -1;
+        ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2); ctx.fill();
+      }
+      requestAnimationFrame(draw);
+    }
+    size(); init(); draw();
+    addEventListener("resize", () => { size(); init(); });
+  </script>
+</body>
+</html>
     }
     button:hover{transform:scale(1.05);}
     #bgCanvas{position:fixed;inset:0;z-index:-1}
